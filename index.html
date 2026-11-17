@@ -39,7 +39,22 @@
       border: 1px solid var(--line);
       border-radius: 12px;
     }
-    header { border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 8px; }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 24px;
+      margin-bottom: 8px;
+    }
+    .photo {
+      flex: none;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--line);
+    }
     h1 { margin: 0; font-size: 2rem; line-height: 1.2; }
     .role { margin: 4px 0 16px; color: var(--accent); font-weight: 600; }
     .contacts { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 0; margin: 0; list-style: none; color: var(--muted); }
@@ -69,6 +84,8 @@
     @media (max-width: 640px) {
       main { margin: 0; padding: 24px 16px; border: 0; border-radius: 0; }
       h1 { font-size: 1.6rem; }
+      header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .photo { width: 112px; height: 112px; }
     }
     @media print {
       body { background: #fff; }
@@ -79,6 +96,8 @@
 <body>
   <main>
     <header>
+      <img class="photo" src="photo.jpg" alt="Фотография Сергея Костанца" width="140" height="140">
+      <div>
       <h1>Сергей Костанец</h1>
       <p class="role">Веб-разработчик</p>
       <ul class="contacts">
@@ -87,6 +106,7 @@
         <li><a href="https://github.com/Sergii-Kostanets">github.com/Sergii-Kostanets</a></li>
         <li><a href="https://www.linkedin.com/in/sergiikostanets">linkedin.com/in/sergiikostanets</a></li>
       </ul>
+      </div>
     </header>
 
     <section>
